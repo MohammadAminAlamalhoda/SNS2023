@@ -16,7 +16,7 @@ def panel():
         cursor = db.conn.cursor()
         cursor.execute('SELECT * FROM users WHERE snsID = ?', (snsID,))
         user_info = cursor.fetchall()
-        return jsonify({'snsID':snsID})
+        return flask.render_template('panel.html', user_info=user_info)
     else:
         return jsonify({'Error':'500'})
 
