@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    
+    <div class="card-deck">
+
+        <div class="card-block" style="margin: .5rem; margin-bottom: 1em; margin-top: 1em">
+            <div class="CardMain card text-center" style="width: 18rem;padding-top: 1rem;">
+                    <h4 class="CardMain">SNS ID {{user_info[0]}} </h4>
+                <div class="card-footer" style="width: 18rem;">
+                    <span class="badge badge-primary" >{{ user_info[1] }} Lunchs | {{ user_info[2] }} Snacks</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+    
+</div>
+{% endblock %}
