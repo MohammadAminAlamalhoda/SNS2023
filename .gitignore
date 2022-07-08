@@ -3,3 +3,5 @@
 *.csv
 *.DS_Store
 */__pycache__
+sns2023
+*.png
