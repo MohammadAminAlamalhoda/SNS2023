@@ -34,4 +34,3 @@ def symposium_img():
 if __name__ == "__main__":
     data = {'name':'MohammadAmin Alamalhoda', 'info':'1 lunch', 'id':'123456789'}
     qr_code_instance = QRCode(data)
-    
