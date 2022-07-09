@@ -1,6 +1,8 @@
 import flask
 from flask import Flask, jsonify
 import sys
+import io
+from PIL import Image
 sys.path.append('Database')
 sys.path.append('QRCode')
 
@@ -29,9 +31,9 @@ def panel():
             cursor.execute('SELECT * FROM users WHERE snsID = ?', (snsID,))
             user_info = cursor.fetchone()
         qr_image = qr.make_image(user_info)
-        qr_image.show()
-        qr_image.close()
-        return flask.render_template('panel.html', user_info=user_info)
+        qr_image_arr = qr_image.tobytes().decode("latin1")
+        html = flask.render_template('panel.html', user_info=user_info)
+        return jsonify({'status':'success', 'html':html, 'qr_image':qr_image_arr})
     else:
         return jsonify({'status':'500 Error'})
 

@@ -5,8 +5,8 @@ class QRCode():
     def __init__(self):
         self.qr = qrcode.QRCode(
             error_correction=qrcode.constants.ERROR_CORRECT_L,
-            box_size=10,
-            border=4,
+            box_size=2,
+            border=0,
         )
 
     def make_image(self, user_info):
