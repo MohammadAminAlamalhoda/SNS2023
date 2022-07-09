@@ -2,7 +2,7 @@ import operators
 
 class database_configs():
     def __init__(self) -> None:
-        self.dbName = '../Database/db_main.db'
+        self.dbName = './Database/db_main.db'
         self.make_conn()
         self.sql_create_table_users = """ CREATE TABLE IF NOT EXISTS users (
                                         snsID text NOT NULL,
