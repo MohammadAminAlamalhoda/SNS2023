@@ -6,6 +6,8 @@ class database_configs():
         self.make_conn()
         self.sql_create_table_users = """ CREATE TABLE IF NOT EXISTS users (
                                         snsID text NOT NULL,
+                                        name text NOT NULL,
+                                        email text NOT NULL,
                                         lunchs inter,
                                         snacks integer,
                                         id integer primary key
